@@ -23,25 +23,26 @@
 
 <body>
     <button id="scrollToTopButton" onclick="scrollToTop()">&#9650;</button>
-    <header>
-        <a href="#">
-            <h1>Faraz</h1>
-        </a>
-        <nav>
-            <ul>
-                <a href="#section-2">
-                    <li>About</li>
-                </a>
-                <a href="#my-work">
-                    <li>Projects</li>
-                </a>
-                <a href="#footer">
-                    <li>Contact</li>
-                </a>
-            </ul>
-        </nav>
-    </header>
-    <main>
+    <div id="homepage">
+        <header>
+            <a href="#">
+                <h1>Faraz</h1>
+            </a>
+            <nav>
+                <ul>
+                    <a href="#section-2">
+                        <li>About</li>
+                    </a>
+                    <a href="#my-work">
+                        <li>Projects</li>
+                    </a>
+                    <a href="#footer">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </nav>
+        </header>
+
         <section id="section-1">
             <div>
                 <h6>Data Scientist</h6>
@@ -51,8 +52,9 @@
                 <img src="/images/waving.png" alt="waving">
             </div>
         </section>
-
-        <section id="section-2" data-scroll>
+    </div>
+    <main>
+        <section id="section-2">
             <div class="my-image">
                 <img src="/images/me.jpg" alt="ME">
             </div>
@@ -239,6 +241,12 @@
             </div>
         </div>
         <div>
+            <div class="sent-message">
+                <div id="message-notification" class="message-notification">
+                    <button id="close-notification" class="close-button">&times;</button>
+                </div>
+            </div>
+
             <form id="contact-form">
                 <div class="input-group">
                     <input class="input" type="text" id="name" name="name" required>
@@ -249,7 +257,7 @@
                     <label for="email" class="input-label">Your Email</label>
                 </div>
                 <textarea placeholder="Your Message" id="message" name="message" rows="4" required></textarea>
-                <button>
+                <button id="submit-button">
                     <span class="circle1"></span>
                     <span class="circle2"></span>
                     <span class="circle3"></span>

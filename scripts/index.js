@@ -102,3 +102,85 @@ function closeContent(contentId) {
     document.getElementById(contentId).style.display = 'none';
     document.getElementById(contentId + '-link').classList.remove('active');
 }
+
+// JavaScript to show the message notification
+function showMessageNotification() {
+    var notification = document.getElementById('message-notification');
+    if (notification) {
+        notification.style.display = 'block';
+    }
+}
+
+// JavaScript to hide the message notification
+function hideMessageNotification() {
+    var notification = document.getElementById('message-notification');
+    if (notification) {
+        notification.style.display = 'none';
+    }
+}
+
+// JavaScript to close the notification when the close button is clicked
+document.getElementById('close-notification').addEventListener('click', function () {
+    hideMessageNotification();
+});
+
+// Function to send a customized message to your Telegram bot
+function sendMessageToTelegram(name, email, message) {
+    const botToken = '5628251127:AAH2-WupSDIUS_27VbUX6WB5CNfn72Ghl5s';
+    const chatId = '952495044';
+
+    // Customize the message format here
+    const formattedMessage = `
+New message received from your website:
+💎 Name: ${name}
+📩 Email: ${email}
+🚀 Message:
+${message}
+    `;
+
+    const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+    const params = {
+        chat_id: chatId,
+        text: formattedMessage,
+    };
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(params),
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            if (data.ok) {
+                // Show the success notification
+                const notification = document.getElementById('message-notification');
+                notification.textContent = 'Message sent successfully!';
+                notification.style.backgroundColor = '#4CAF50';
+                notification.style.display = 'block';
+
+                // Clear the form
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('message').value = '';
+            } else {
+                alert('Message failed to send. Please try again later.');
+            }
+        })
+        .catch((error) => {
+            console.error('Error sending message:', error);
+            alert('An error occurred. Please try again later.');
+        });
+}
+
+// Handle form submission
+document.getElementById('submit-button').addEventListener('click', function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    sendMessageToTelegram(name, email, message);
+});
