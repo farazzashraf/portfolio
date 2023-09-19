@@ -102,6 +102,3 @@ function closeContent(contentId) {
     document.getElementById(contentId).style.display = 'none';
     document.getElementById(contentId + '-link').classList.remove('active');
 }
-
-
-

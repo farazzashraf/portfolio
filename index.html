@@ -157,17 +157,18 @@
                     </div>
 
                     <div class="card">
-                        <a href="https://github.com/farazzashraf/heart-disease-classification.git">
+                        <a href="https://github.com/farazzashraf/heart-disease-classification.git" target="_blank">
                             <img class="card-img" src="/images/istockphoto-1178183695-612x612.jpg"
                                 alt="data science project">
 
                             <div class="centered-text">
-                                <h2>Health Disease Classification</h2>
+                                <h2>Heart Disease Classification</h2>
                             </div>
                             <div class="card-body">
-                                <h1 class="card-title">Health Disease Classification</h1>
+                                <h1 class="card-title">Heart Disease Classification</h1>
                                 <!-- <p class="card-sub-title">hello</p> -->
-                                <p class="card-info">This is a data science project. Here we analyze the heart
+                                <p class="card-info" id="heart-info">This is a data science project. Here we analyze the
+                                    heart
                                     disease
                                     dataset and predict mostly how it comes.<br>
                                     If you want to see how I analyzed, just click this and will take you to my
@@ -188,7 +189,7 @@
                             <div class="card-body">
                                 <h1 class="card-title">Dog Breed Classification</h1>
                                 <!-- <p class="card-sub-title">hello</p> -->
-                                <p class="card-info">
+                                <p class="card-info" id="dog-info">
                                     Here we built the dog breed classification model so that it can
                                     recognize the dog breed. If you want the code then click
                                     this and will take you to my github repository.
@@ -239,10 +240,23 @@
         </div>
         <div>
             <form id="contact-form">
-                <input placeholder="Your Name" type="text" id="name" name="name" required>
-                <input placeholder="Your Email" type="email" id="email" name="email" required>
+                <div class="input-group">
+                    <input class="input" type="text" id="name" name="name" required>
+                    <label for="name" class="input-label">Your Name</label>
+                </div>
+                <div class="input-group">
+                    <input class="input" type="email" id="email" name="email" required>
+                    <label for="email" class="input-label">Your Email</label>
+                </div>
                 <textarea placeholder="Your Message" id="message" name="message" rows="4" required></textarea>
-                <button type="submit">Submit</button>
+                <button>
+                    <span class="circle1"></span>
+                    <span class="circle2"></span>
+                    <span class="circle3"></span>
+                    <span class="circle4"></span>
+                    <span class="circle5"></span>
+                    <span class="text">Submit</span>
+                </button>
             </form>
         </div>
     </footer>
