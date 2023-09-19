@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+    <link rel="stylesheet" href="/styles/style.css">
+    <script src="/scripts/index.js" defer></script>
+    <title>My-Portfolio</title>
+</head>
+
+<body>
+    <button id="scrollToTopButton" onclick="scrollToTop()">&#9650;</button>
+    <header>
+        <a href="#">
+            <h1>Faraz</h1>
+        </a>
+        <nav>
+            <ul>
+                <a href="#section-2">
+                    <li>About</li>
+                </a>
+                <a href="#my-work">
+                    <li>Projects</li>
+                </a>
+                <a href="#footer">
+                    <li>Contact</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="section-1">
+            <div>
+                <h6>Data Scientist</h6>
+                <p>Hi, I am <span>Faraz Ashraf</span>.</p>
+            </div>
+            <div class="waving">
+                <img src="/images/waving.png" alt="waving">
+            </div>
+        </section>
+
+        <section id="section-2" data-scroll>
+            <div class="my-image">
+                <img src="/images/me.jpg" alt="ME">
+            </div>
+            <div class="about-me">
+                <h2>About me</h2>
+                <p>
+                    Hello,I'm Faraz Ashraf, a passionate data science and analytics enthusiast.<br>
+                    I am currently pursuing my studies at Jain University, where I'm enrolled<br> in the
+                    Data Science and Analytics program.
+                </p>
+                <div id="additional-info">
+                    <div>
+                        <ul class="nav">
+                            <li class="link link1" id="skills-link"><a href="javascript:void(0);"
+                                    onclick="showContent('skills')">Skills</a></li>
+                            <li class="link link2" id="experience-link"><a href="javascript:void(0);"
+                                    onclick="showContent('experience')">Experience</a></li>
+                            <li class="link link3" id="education-link"><a href="javascript:void(0);"
+                                    onclick="showContent('education')">Education</a></li>
+                        </ul>
+                        <div class="see">
+                            <div class="content skill" id="skills">
+                                <button class="close-button" onclick="closeContent('skills')"><i
+                                        class="fas fa-times"></i></button>
+                                <div>
+                                    <p>Web Development</p>
+                                    <div class="progress-bar">
+                                        <div class="progress web-development" style="width: 65%;"><span>65%</span></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>Machine Learning</p>
+                                    <div class="progress-bar">
+                                        <div class="progress ml" style="width: 80%;"><span>80%</span></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>Data Visualization</p>
+                                    <div class="progress-bar">
+                                        <div class="progress dv" style="width: 80%;"><span>80%</span></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>Forecasting</p>
+                                    <div class="progress-bar">
+                                        <div class="progress forecasting" style="width: 50%;"><span>50%</span></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>Python</p>
+                                    <div class="progress-bar">
+                                        <div class="progress python" style="width: 80%;"><span>80%</span></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <P>R Programmming</P>
+                                    <div class="progress-bar">
+                                        <div class="progress r-prog" style="width: 60%;"><span>60%</span></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="content" id="experience" style="display: none;">
+                                <button class="close-button" onclick="closeContent('experience')"><i
+                                        class="fas fa-times"></i></button>
+                                <p>Virtual Internship at Oasis Infobyte</p>
+                                <p>Virtual Internship at LetsGrowMore(LGM)</p>
+
+                            </div>
+
+                            <div class="content" id="education" style="display: none;">
+                                <button class="close-button" onclick="closeContent('education')"><i
+                                        class="fas fa-times"></i></button>
+                                <p>B.Sc Data Science and Analytics (honours) at Jain University- 2021 - 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-3" data-scroll>
+            <div id=my-work>
+
+                <div>
+                    <h1>My Work</h1>
+                    <div class="card">
+                        <a href="https://tic-tac-toe-udemyproject.netlify.app">
+                            <img class="card-img" src="/images/tic-tac-toe-.jpg" alt="tic-tac-toe-project">
+
+                            <div class="centered-text">
+                                <h2>tic-tac-toe</h2>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title">tic-tac-toe</h1>
+                                <!-- <p class="card-sub-title">hello</p> -->
+                                <p class="card-info">This the tic-tac-toe game project.<br>
+                                    Click if you want to to see the site.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <a href="https://github.com/farazzashraf/heart-disease-classification.git">
+                            <img class="card-img" src="/images/istockphoto-1178183695-612x612.jpg"
+                                alt="data science project">
+
+                            <div class="centered-text">
+                                <h2>Health Disease Classification</h2>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title">Health Disease Classification</h1>
+                                <!-- <p class="card-sub-title">hello</p> -->
+                                <p class="card-info">This is a data science project. Here we analyze the heart
+                                    disease
+                                    dataset and predict mostly how it comes.<br>
+                                    If you want to see how I analyzed, just click this and will take you to my
+                                    github repository.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <a href="https://github.com/farazzashraf/dog-breed-classification.git">
+                            <img class="card-img" src="/images/pngtree-ai-letter-digital-artificial-intelligence.jpg"
+                                alt="dog-breed-classsification-project">
+
+                            <div class="centered-text">
+                                <h2>Dog Breed Classification</h2>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title">Dog Breed Classification</h1>
+                                <!-- <p class="card-sub-title">hello</p> -->
+                                <p class="card-info">
+                                    Here we built the dog breed classification model so that it can
+                                    recognize the dog breed. If you want the code then click
+                                    this and will take you to my github repository.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <p>Go to my <a href="https://github.com/farazzashraf">github</a> to see my other projects like music
+                    recommendation system and other analysis etc.</p>
+            </div>
+        </section>
+    </main>
+    <footer id="footer" data-scroll>
+        <div class="contact-me">
+            <h1>Contact Me</h1>
+            <div id="phone-mail">
+                <a href="mailto:youremail@example.com" target="_blank">
+                    <img class="mail" src="/images/icons8-email-48.png" alt="email">farazashraf.work@gmail.com
+                </a>
+                <a href="tel:+919633163334">
+                    <img class="phone" src="/images/icons8-phone-48.png" alt="phone">+919633163334
+                </a>
+            </div>
+            <div id="icons">
+                <div>
+                    <a class="img github" href="">
+                        <img src="/images/icons8-github-50.png" alt="github">
+                    </a>
+                </div>
+                <div>
+                    <a class="img linkedin" href="">
+                        <img src="/images/icons8-linkedin-48.png" alt="linkedin">
+                    </a>
+                </div>
+                <div>
+                    <a class="img twitter" href="">
+                        <img src="/images/icons8-twitter-50 (1).png" alt="twitter">
+                    </a>
+                </div>
+            </div>
+            <div class="cv">
+                <a href="https://drive.google.com/file/d/1cVGNB0naDCaN95BWqwQyq8aBbb4n3CYW/view?usp=sharing"
+                    target="_blank">
+                    My CV
+                </a>
+            </div>
+        </div>
+        <div>
+            <form id="contact-form">
+                <input placeholder="Your Name" type="text" id="name" name="name" required>
+                <input placeholder="Your Email" type="email" id="email" name="email" required>
+                <textarea placeholder="Your Message" id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </footer>
+</body>
+
+</html>
