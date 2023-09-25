@@ -119,11 +119,6 @@ function hideMessageNotification() {
     }
 }
 
-// JavaScript to close the notification when the close button is clicked
-document.getElementById('close-notification').addEventListener('click', function () {
-    hideMessageNotification();
-});
-
 // Function to send a customized message to your Telegram bot
 function sendMessageToTelegram(name, email, message) {
     const botToken = '5628251127:AAH2-WupSDIUS_27VbUX6WB5CNfn72Ghl5s';
@@ -182,5 +177,65 @@ document.getElementById('submit-button').addEventListener('click', function (eve
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
 
+    // Check if any of the fields are empty
+    if (!name || !email || !message) {
+        const notification = document.getElementById('message-notification');
+        notification.textContent = 'Please fill in all fields.';
+        notification.style.backgroundColor = '#ff0000'; // Red color for error
+        notification.style.display = 'block';
+        return; // Exit the function and prevent form submission
+    }
+
     sendMessageToTelegram(name, email, message);
+});
+
+// responsive design
+
+const menuToggle = document.getElementById("menu-toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
+const closeButton = document.getElementById("close-menu");
+
+// Function to open the mobile menu
+function openMobileMenu() {
+    mobileMenu.style.right = "0";
+    mobileMenu.classList.add("menu-open");
+    closeButton.style.display = "block"; // Show the close button
+}
+
+// Function to close the mobile menu
+function closeMobileMenu() {
+    mobileMenu.style.right = "-800px"; // Adjust this value to match your mobile menu width
+    mobileMenu.classList.remove("menu-open");
+    closeButton.style.display = "none"; // Hide the close button
+}
+
+// Toggle the mobile menu when the menu toggle checkbox changes
+menuToggle.addEventListener("change", function () {
+    if (menuToggle.checked) {
+        openMobileMenu();
+    } else {
+        closeMobileMenu();
+    }
+});
+
+// Add a click event listener to the document to close the menu when clicking outside
+document.addEventListener("click", function (e) {
+    const target = e.target;
+    if (menuToggle.checked && target !== menuToggle && target !== closeButton && !mobileMenu.contains(target)) {
+        // Clicked outside the mobile menu, not on the menu toggle or close button
+        menuToggle.checked = false;
+        closeMobileMenu();
+    }
+});
+
+// Prevent clicks inside the mobile menu from closing it
+mobileMenu.addEventListener("click", function (e) {
+    e.stopPropagation();
+});
+
+// Add a click event listener to the close button
+closeButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    menuToggle.checked = false;
+    closeMobileMenu();
 });

@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
 
     <link rel="stylesheet" href="/styles/style.css">
     <script src="/scripts/index.js" defer></script>
@@ -28,7 +27,21 @@
             <a href="#">
                 <h1>Faraz</h1>
             </a>
-            <nav>
+            <input type="checkbox" id="menu-toggle">
+            <label class="menuButton" for="menu-toggle">
+                <span class="top"></span>
+                <span class="mid"></span>
+                <span class="bot"></span>
+            </label>
+            <!-- Mobile menu content -->
+
+            <nav class="mobile-menu">
+                <a href="#section-2">About</a>
+                <a href="#my-work">Projects</a>
+                <a href="#footer">Contact</a>
+            </nav>
+
+            <nav class="desktop-nav">
                 <ul>
                     <a href="#section-2">
                         <li>About</li>
@@ -44,9 +57,9 @@
         </header>
 
         <section id="section-1">
-            <div>
+            <div class="data-scientist">
                 <h6>Data Scientist</h6>
-                <p>Hi, I am <span>Faraz Ashraf</span>.</p>
+                <p>Hi, I am <span id="typed-text">Faraz Ashraf</span>.</p>
             </div>
             <div class="waving">
                 <img src="/images/waving.png" alt="waving">
@@ -54,12 +67,17 @@
         </section>
     </div>
     <main>
-        <section id="section-2">
+        <section id="section-2" data-scroll>
+            <div class="mobile-about-me">
+                <h1>About Me</h1>
+            </div>
             <div class="my-image">
                 <img src="/images/me.jpg" alt="ME">
             </div>
             <div class="about-me">
-                <h2>About me</h2>
+                <div class="about-me-h2">
+                    <h2>About me</h2>
+                </div>
                 <p>
                     Hello,I'm Faraz Ashraf, a passionate data science and analytics enthusiast.<br>
                     I am currently pursuing my studies at Jain University, where I'm enrolled<br> in the
@@ -77,7 +95,7 @@
                         </ul>
                         <div class="see">
                             <div class="content skill" id="skills">
-                                <button class="close-button" onclick="closeContent('skills')"><i
+                                <button class="about-me-close-button" onclick="closeContent('skills')"><i
                                         class="fas fa-times"></i></button>
                                 <div>
                                     <p>Web Development</p>
@@ -118,7 +136,7 @@
 
                             </div>
                             <div class="content" id="experience" style="display: none;">
-                                <button class="close-button" onclick="closeContent('experience')"><i
+                                <button class="about-me-close-button" onclick="closeContent('experience')"><i
                                         class="fas fa-times"></i></button>
                                 <p>Virtual Internship at Oasis Infobyte</p>
                                 <p>Virtual Internship at LetsGrowMore(LGM)</p>
@@ -126,7 +144,7 @@
                             </div>
 
                             <div class="content" id="education" style="display: none;">
-                                <button class="close-button" onclick="closeContent('education')"><i
+                                <button class="about-me-close-button" onclick="closeContent('education')"><i
                                         class="fas fa-times"></i></button>
                                 <p>B.Sc Data Science and Analytics (honours) at Jain University- 2021 - 2024</p>
                             </div>
@@ -206,17 +224,73 @@
         </section>
     </main>
     <footer id="footer" data-scroll>
-        <div class="contact-me">
-            <h1>Contact Me</h1>
-            <div id="phone-mail">
-                <a href="mailto:farazashraf.work@gmail.com" target="_blank">
-                    <img class="mail" src="/images/icons8-email-48.png" alt="email">farazashraf.work@gmail.com
-                </a>
-                <a href="tel:+919633163334">
-                    <img class="phone" src="/images/icons8-phone-48.png" alt="phone">+919633163334
-                </a>
+        <div>
+            <div class="contact-me">
+                <h1>Contact Me</h1>
+                <div id="phone-mail">
+                    <a href="mailto:farazashraf.work@gmail.com" target="_blank">
+                        <img class="mail" src="/images/icons8-email-48.png" alt="email">farazashraf.work@gmail.com
+                    </a>
+                    <a href="tel:+919633163334">
+                        <img class="phone" src="/images/icons8-phone-48.png" alt="phone">+919633163334
+                    </a>
+                </div>
+                <div id="icons">
+                    <div>
+                        <a class="img github" href="https://github.com/farazzashraf" target="_blank">
+                            <img src="/images/icons8-github-50.png" alt="github">
+                        </a>
+                    </div>
+                    <div>
+                        <a class="img linkedin" href="https://www.linkedin.com/in/faraz-ashraf-11a456227/"
+                            target="_blank">
+                            <img src="/images/icons8-linkedin-48.png" alt="linkedin">
+                        </a>
+                    </div>
+                    <div>
+                        <a class="img twitter" href="https://twitter.com/farasashraf1" target="_blank">
+                            <img src="/images/icons8-twitter-50 (1).png" alt="twitter">
+                        </a>
+                    </div>
+                </div>
+                <div class="cv">
+                    <a href="https://drive.google.com/file/d/1cVGNB0naDCaN95BWqwQyq8aBbb4n3CYW/view?usp=sharing"
+                        target="_blank">
+                        My CV
+                    </a>
+                </div>
             </div>
-            <div id="icons">
+            <div>
+                <div class="sent-message">
+                    <div id="message-notification" class="message-notification">
+
+                    </div>
+                </div>
+
+                <form id="contact-form">
+                    <div class="input-group">
+                        <input class="input" type="text" id="name" name="name" required>
+                        <label for="name" class="input-label">Your Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input class="input" type="email" id="email" name="email" required>
+                        <label for="email" class="input-label">Your Email</label>
+                    </div>
+                    <textarea placeholder="Your Message" id="message" name="message" rows="4" required></textarea>
+                    <div id="button">
+                        <button id="submit-button">
+                            <span class="circle1"></span>
+                            <span class="circle2"></span>
+                            <span class="circle3"></span>
+                            <span class="circle4"></span>
+                            <span class="circle5"></span>
+                            <span class="text">Submit</span>
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+            <div class="mobile-icons">
                 <div>
                     <a class="img github" href="https://github.com/farazzashraf" target="_blank">
                         <img src="/images/icons8-github-50.png" alt="github">
@@ -233,39 +307,12 @@
                     </a>
                 </div>
             </div>
-            <div class="cv">
+            <div class="mobile-cv">
                 <a href="https://drive.google.com/file/d/1cVGNB0naDCaN95BWqwQyq8aBbb4n3CYW/view?usp=sharing"
                     target="_blank">
                     My CV
                 </a>
             </div>
-        </div>
-        <div>
-            <div class="sent-message">
-                <div id="message-notification" class="message-notification">
-                    <button id="close-notification" class="close-button">&times;</button>
-                </div>
-            </div>
-
-            <form id="contact-form">
-                <div class="input-group">
-                    <input class="input" type="text" id="name" name="name" required>
-                    <label for="name" class="input-label">Your Name</label>
-                </div>
-                <div class="input-group">
-                    <input class="input" type="email" id="email" name="email" required>
-                    <label for="email" class="input-label">Your Email</label>
-                </div>
-                <textarea placeholder="Your Message" id="message" name="message" rows="4" required></textarea>
-                <button id="submit-button">
-                    <span class="circle1"></span>
-                    <span class="circle2"></span>
-                    <span class="circle3"></span>
-                    <span class="circle4"></span>
-                    <span class="circle5"></span>
-                    <span class="text">Submit</span>
-                </button>
-            </form>
         </div>
     </footer>
 </body>
