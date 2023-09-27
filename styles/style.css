@@ -803,12 +803,13 @@ button:hover span:not(:nth-child(6)) {
         justify-content: center;
         align-items: center;
         gap: 2.5rem;
-        background-color: #3333333e;
+        /* background-color: #3333333e; */
+        /* background: white; */
         backdrop-filter: blur(-10px);
         border-radius: 4px;
         position: fixed;
         top: 0;
-        right: -800px;
+        right: -1000px;
         width: 100%;
         height: 8.5rem;
         transition: right 0.6s ease-in-out;
@@ -908,6 +909,7 @@ button:hover span:not(:nth-child(6)) {
 
     #section-1 {
         margin: 0;
+        margin-top: 3rem;
     }
 
     #section-1 .data-scientist {
@@ -915,7 +917,8 @@ button:hover span:not(:nth-child(6)) {
         flex-direction: column;
         justify-content: center;
         align-items: start;
-        margin: 0 25%;
+        /* margin: 0 25%; */
+        width: 50%;
         padding: 0;
     }
 
@@ -934,6 +937,8 @@ button:hover span:not(:nth-child(6)) {
 
     #section-2 {
         /* flex-wrap: nowrap; */
+        opacity: .8;
+        /* color: black; */
         justify-content: center;
         align-items: center;
     }
@@ -964,7 +969,8 @@ button:hover span:not(:nth-child(6)) {
         display: inline-block;
         padding-bottom: 2px;
         text-decoration: none;
-        color: #ffffff;
+        /* color: #ffffff; */
+        /* color: black; */
         overflow: hidden;
     }
 
@@ -1009,8 +1015,11 @@ button:hover span:not(:nth-child(6)) {
 
     #additional-info .nav {
         justify-content: center;
-        gap: 1rem;
-        margin-right: 2rem;
+        align-items: center;
+        gap: 0rem;
+        margin: 0;
+        margin-top: 1rem;
+        /* margin-right: 2rem; */
     }
 
 
@@ -1226,14 +1235,23 @@ button:hover span:not(:nth-child(6)) {
 
     #button {
         display: flex;
-        justify-content: flex-end;
-        align-items: end;
+        justify-content: center;
+        align-items: center;
         margin: 0 2rem;
         width: 80%;
     }
 
     button {
         padding: 1rem 2rem;
+    }
+
+    #cv-icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+        margin-top: 3rem;
+        margin-bottom: -3.5rem;
     }
 
     .mobile-icons {
@@ -1243,34 +1261,34 @@ button:hover span:not(:nth-child(6)) {
         justify-content: flex-start;
         align-items: center;
         gap: 1.1rem;
-        margin: 0 4rem;
-        margin-top: -2.5rem;
+        /* margin: 0 4rem; */
+        /* margin-top: -2.5rem; */
     }
 
     .mobile-icons div .github img {
         background: white;
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
         border-radius: 50%;
     }
 
     .mobile-icons div .linkedin img {
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
     }
 
     .mobile-icons div .twitter img {
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
     }
 
     .mobile-cv {
-        display: flex;
-        justify-content: center;
-        width: 30%;
-        margin: 0 auto;
-        margin-top: 2.5rem;
-        margin-bottom: -5rem;
+        display: block;
+        /* justify-content: center; */
+        /* width: 30%; */
+        /* margin: 0 auto; */
+        /* margin-top: 2.5rem; */
+        /* margin-bottom: -5rem; */
         padding: 10px 20px;
         background: linear-gradient(to bottom, #0074D9, #0056b3);
         color: #fff;

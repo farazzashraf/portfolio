@@ -204,7 +204,7 @@ function openMobileMenu() {
 
 // Function to close the mobile menu
 function closeMobileMenu() {
-    mobileMenu.style.right = "-800px"; // Adjust this value to match your mobile menu width
+    mobileMenu.style.right = "-1000px"; // Adjust this value to match your mobile menu width
     mobileMenu.classList.remove("menu-open");
     closeButton.style.display = "none"; // Hide the close button
 }
