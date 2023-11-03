@@ -1024,7 +1024,8 @@ button:hover span:not(:nth-child(6)) {
 
 
     #additional-info .nav li {
-        font-size: 0.8rem;
+        font-size: 0.65rem;
+        margin: 0;
 
     }
 
