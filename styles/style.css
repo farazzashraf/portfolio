@@ -301,6 +301,14 @@ main #additional-info .nav li {
     animation: ml 3s;
 }
 
+.dl {
+    animation: dl 3s;
+}
+
+.nl {
+    animation: nl 3s;
+}
+
 .dv {
     animation: dv 3s;
 }
@@ -315,6 +323,10 @@ main #additional-info .nav li {
 
 .r-prog {
     animation: r-prog 3s;
+}
+
+.sp {
+    animation: sp 3s;
 }
 
 @keyframes web-development {
@@ -334,6 +346,26 @@ main #additional-info .nav li {
 
     100% {
         width: 80%;
+    }
+}
+
+@keyframes dl {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 50%;
+    }
+}
+
+@keyframes nl {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 50%;
     }
 }
 
@@ -374,6 +406,16 @@ main #additional-info .nav li {
 
     100% {
         width: 60%;
+    }
+}
+
+@keyframes sp {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 50%;
     }
 }
 
